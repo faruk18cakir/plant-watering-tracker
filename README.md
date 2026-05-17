@@ -87,4 +87,4 @@ npm run dev
 ```bash
 http://localhost:5173
 ```
-- Bu adres üzerinden uygulamaya erişebilirsiniz.
+- Terminal üzerinden verilen adres ile uygulamaya erişebilirsiniz.
