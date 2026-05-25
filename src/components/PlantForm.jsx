@@ -1,4 +1,5 @@
 import { useState } from "react";
+import PlantInterface from "../interfaces/PlantInterface";
 
 function PlantForm({ setPlants }) {
   const [name, setName] = useState("");
@@ -12,13 +13,10 @@ function PlantForm({ setPlants }) {
       return;
     }
 
-    const newPlant = {
-      id: Date.now(),
-      name,
-      wateringInterval: Number(interval),
-      lastWatered: null,
-    };
-
+    const newPlant = PlantInterface();
+    newPlant.name = name;
+    newPlant.wateringInterval = Number(interval);
+      
     setPlants((prev) => [...prev, newPlant]);
 
     setName("");
